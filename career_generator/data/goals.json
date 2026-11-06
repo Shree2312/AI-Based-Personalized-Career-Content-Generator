@@ -1,0 +1,50 @@
+{
+  "Get a job in a product company": {
+    "summary_phrase": "join a product-driven tech company",
+    "extra_interview_question": "Why do you prefer a product company over a service company?"
+  },
+  "Get a job in a service company": {
+    "summary_phrase": "build a career in a leading service-based IT firm",
+    "extra_interview_question": "How do you handle working on multiple client projects simultaneously?"
+  },
+  "Start a startup": {
+    "summary_phrase": "launch an innovative tech startup",
+    "extra_interview_question": "What problem do you want your startup to solve and why?"
+  },
+  "Become a freelancer": {
+    "summary_phrase": "build a successful freelancing career",
+    "extra_interview_question": "How do you manage client expectations and deadlines as a freelancer?"
+  },
+  "Higher studies (MS/MTech)": {
+    "summary_phrase": "pursue higher studies in computer science",
+    "extra_interview_question": "What research area interests you and why did you choose this program?"
+  },
+  "Government/PSU job": {
+    "summary_phrase": "secure a government or PSU technical role",
+    "extra_interview_question": "Why do you prefer a government job over a private sector role?"
+  },
+  "Crack campus placements": {
+    "summary_phrase": "excel in campus recruitment and join a top company",
+    "extra_interview_question": "How have you prepared differently for technical vs HR rounds?"
+  },
+  "Switch to a data career": {
+    "summary_phrase": "transition into a data-driven technical role",
+    "extra_interview_question": "What motivated you to switch to a data career from your current background?"
+  },
+  "Research career": {
+    "summary_phrase": "contribute to cutting-edge research in technology",
+    "extra_interview_question": "Describe a research problem you would like to work on and your approach."
+  },
+  "Work abroad": {
+    "summary_phrase": "build an international career in technology",
+    "extra_interview_question": "How have you prepared yourself for working in a cross-cultural environment?"
+  },
+  "Become a team lead": {
+    "summary_phrase": "grow into a technical leadership role",
+    "extra_interview_question": "Describe a situation where you led a group and what you learned from it."
+  },
+  "Build my own app": {
+    "summary_phrase": "design and launch a personal technology product",
+    "extra_interview_question": "Walk me through the app you want to build: problem, users, and tech stack."
+  }
+}

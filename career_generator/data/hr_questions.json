@@ -1,0 +1,34 @@
+[
+  {
+    "question": "Tell me about yourself.",
+    "answer": "Give a 2-minute structured intro: background, skills, and why you want this role."
+  },
+  {
+    "question": "Where do you see yourself in 5 years?",
+    "answer": "Mention growth in your chosen field, taking on more responsibilities, and leadership."
+  },
+  {
+    "question": "Why do you want this role?",
+    "answer": "Mention your passion, relevant skills, and how the role aligns with your career goal."
+  },
+  {
+    "question": "What is your greatest strength?",
+    "answer": "Pick a technical strength with a brief example proving it."
+  },
+  {
+    "question": "What is your greatest weakness?",
+    "answer": "Name a real weakness and explain the steps you are taking to improve it."
+  },
+  {
+    "question": "Tell me about a challenge you overcame.",
+    "answer": "Use the STAR method: Situation, Task, Action, Result."
+  },
+  {
+    "question": "Why should we hire you?",
+    "answer": "Summarise your key skills, work ethic, and enthusiasm for the role."
+  },
+  {
+    "question": "Do you have any questions for us?",
+    "answer": "Always ask one thoughtful question about team culture or growth opportunities."
+  }
+]

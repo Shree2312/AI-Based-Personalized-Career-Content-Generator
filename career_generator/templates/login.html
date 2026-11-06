@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Login – Career Generator{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-5 col-lg-4">
+    <div class="card shadow-sm border-0 mt-4">
+
+      <div class="card-header fw-bold text-white" style="background:#1e3a5f;">
+        <i class="bi bi-box-arrow-in-right me-2"></i>Login to Your Account
+      </div>
+
+      <div class="card-body p-4">
+
+        <!-- Flash messages: errors show in red (danger), success in green -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }} py-2">{{ message }}</div>
+          {% endfor %}
+        {% endwith %}
+
+        <form method="POST" action="{{ url_for('login') }}">
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Email Address</label>
+            <!-- type="email" gives basic browser-side hint; real check is server-side -->
+            <input type="email" name="email" class="form-control"
+                   placeholder="you@example.com" autofocus required>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label fw-semibold">Password</label>
+            <input type="password" name="password" class="form-control" required>
+          </div>
+
+          <button type="submit" class="btn w-100 fw-bold text-white"
+                  style="background:#1e3a5f;">
+            <i class="bi bi-box-arrow-in-right me-2"></i>Login
+          </button>
+        </form>
+
+        <hr class="my-3">
+        <p class="text-center mb-0 text-muted small">
+          No account yet?
+          <a href="{{ url_for('register') }}" style="color:#14b8a6;">Register here</a>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

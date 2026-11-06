@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block title %}Enter Your Details – Career Generator{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="d-flex justify-content-between align-items-center mb-1">
+      <h2 class="fw-bold mb-0" style="color:#1e3a5f;">
+        <i class="bi bi-pencil-square me-2"></i>Career Profile Form
+      </h2>
+      <!-- Fill Sample Data button – calls fillSampleData() in form.js -->
+      <button type="button" class="btn btn-outline-secondary btn-sm" onclick="fillSampleData()">
+        <i class="bi bi-magic me-1"></i>Fill Sample Data
+      </button>
+    </div>
+    <p class="text-muted mb-4">Fill in all fields. Skills separated by commas. Select 1–5 interests.</p>
+
+    <!-- Show validation errors if any -->
+    {% if errors %}
+    <div class="alert alert-danger">
+      <ul class="mb-0">{% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+
+    <!-- Form submits via POST to the same /form route -->
+    <form method="POST" action="{{ url_for('form') }}" novalidate>
+
+      <!-- Full Name -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+        <input type="text" name="name" id="name-input" class="form-control"
+               placeholder="e.g. Priya Sharma" required>
+      </div>
+
+      <!-- Education -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Education <span class="text-danger">*</span></label>
+        <input type="text" name="education" id="education-input" class="form-control"
+               placeholder="e.g. B.Tech Computer Science">
+      </div>
+
+      <!-- Skills -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Your Skills (comma-separated) <span class="text-danger">*</span></label>
+        <input type="text" name="skills" id="skills-input" class="form-control"
+               placeholder="e.g. python, sql, git  |  aliases ok: py, js, ts, ml, k8s, aws">
+        <div class="form-text">
+          Aliases: py→python, js→javascript, ts→typescript, ml→machine learning, k8s→kubernetes, aws→aws, and 40+ more.
+        </div>
+      </div>
+
+      <!-- Academic Interests (checkboxes, 1–5) -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">
+          Academic Interests (select 1–5) <span class="text-danger">*</span>
+        </label>
+        <div class="row g-2" id="interests-group">
+          {% for interest in interests %}
+          <div class="col-md-4 col-6">
+            <div class="form-check">
+              <!-- Each checkbox sends its value as part of the "interests" list -->
+              <input class="form-check-input interest-cb" type="checkbox"
+                     name="interests" value="{{ interest }}" id="int_{{ loop.index }}">
+              <label class="form-check-label" for="int_{{ loop.index }}">{{ interest }}</label>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="form-text">Select at least 1 and at most 5.</div>
+      </div>
+
+      <!-- Career Goal dropdown -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Career Goal <span class="text-danger">*</span></label>
+        <select name="career_goal" id="career-goal-select" class="form-select">
+          {% for goal in goals %}
+            <option value="{{ goal }}">{{ goal }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <!-- Target Role Dropdown -->
+      <div class="mb-4">
+        <label class="form-label fw-semibold">Target Role <span class="text-danger">*</span></label>
+        <select name="role" id="role-select" class="form-select">
+          {% for role in roles %}
+            <option value="{{ role }}">{{ role }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-lg w-100 fw-bold"
+              style="background:#1e3a5f;color:white;">
+        <i class="bi bi-lightning-fill me-2"></i>Generate My Career Report
+      </button>
+    </form>
+  </div>
+</div>
+<!-- Load the sample-data script from static/form.js -->
+<script src="{{ url_for('static', filename='form.js') }}"></script>
+{% endblock %}

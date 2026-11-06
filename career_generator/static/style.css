@@ -1,0 +1,75 @@
+/* style.css – Custom styles for the Career Generator app */
+
+/* ── Root colour variables ────────────────────────────── */
+:root {
+  --navy:  #1e3a5f;   /* primary dark blue */
+  --teal:  #14b8a6;   /* accent teal */
+  --light: #f8fafc;   /* page background */
+}
+
+/* Page background colour */
+body {
+  background-color: var(--light);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* Navbar bottom shadow */
+.navbar {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Card hover lift effect */
+.card {
+  transition: box-shadow 0.2s ease;
+}
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Progress bar text alignment */
+.progress-bar {
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+/* Badge pill style */
+.badge {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* Footer separator */
+footer {
+  border-top: 1px solid #e2e8f0;
+}
+
+/* ── Print styles – hide navigation & buttons when printing ── */
+@media print {
+  /* Hide the top nav, footer, and all no-print elements */
+  .navbar, footer, .no-print {
+    display: none !important;
+  }
+  /* Remove Bootstrap container padding when printing */
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  /* Show all accordion content when printing so text is visible */
+  .accordion-collapse {
+    display: block !important;
+  }
+  /* Keep teal badges legible on paper */
+  .badge[style*="14b8a6"] {
+    background: #0d9488 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* ── Responsive table card on small screens ─────────────── */
+@media (max-width: 576px) {
+  .table-responsive {
+    font-size: 0.85rem;
+  }
+}

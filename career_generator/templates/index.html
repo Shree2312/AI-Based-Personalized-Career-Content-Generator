@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}Home – Career Generator{% endblock %}
+
+{% block content %}
+<div class="text-center py-5">
+  <!-- Hero heading -->
+  <h1 class="display-5 fw-bold" style="color:#1e3a5f;">
+    AI-Based Personalized Career Content Generator
+  </h1>
+  <p class="lead text-muted mt-3 mb-1">
+    Enter your skills, interests and goal — get a full career profile instantly.
+  </p>
+  <!-- Honest note about the generation method -->
+  <p class="text-muted" style="font-size:0.9rem;">
+    <i class="bi bi-info-circle me-1"></i>
+    Generation is <strong>rule-based</strong> using a JSON knowledge base and templates. No AI or LLM is used.
+  </p>
+
+  <a href="{{ url_for('form') }}" class="btn btn-lg mt-3 px-5" style="background:#14b8a6;color:white;">
+    <i class="bi bi-play-fill me-2"></i>Get Started
+  </a>
+
+  <hr class="my-5">
+
+  <!-- Feature cards row -->
+  <div class="row g-4 text-start">
+    {% set features = [
+      ("bi-person-badge","Professional Summary","3 template variations personalised with your data."),
+      ("bi-bar-chart-fill","Skill Gap Report","See matched vs missing skills with a readiness score."),
+      ("bi-book-fill","Learning Roadmap","A 4-week plan built from your actual missing skills."),
+      ("bi-chat-quote-fill","Interview Prep","Technical Q&A from your gaps + 3 HR questions."),
+      ("bi-check-circle-fill","Consistency Check","Every output is verified to be internally consistent."),
+      ("bi-clock-history","History","Every report is saved; revisit any time."),
+    ] %}
+    {% for icon, title, desc in features %}
+    <div class="col-md-4">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-body">
+          <i class="bi {{ icon }} fs-2 mb-2" style="color:#14b8a6;"></i>
+          <h5 class="fw-bold" style="color:#1e3a5f;">{{ title }}</h5>
+          <p class="text-muted mb-0">{{ desc }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

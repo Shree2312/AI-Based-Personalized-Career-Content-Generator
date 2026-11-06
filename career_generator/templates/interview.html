@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Interview Prep – {{ report.profile.name }}{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+  <h2 class="fw-bold mb-0" style="color:#1e3a5f;">
+    <i class="bi bi-chat-quote-fill me-2"></i>Interview Preparation
+    <small class="text-muted fs-6">— {{ report.profile.name }} / {{ report.profile.role }}</small>
+  </h2>
+  <div class="d-flex gap-2 no-print">
+    <a href="{{ url_for('results', report_id=report_id) }}"
+       class="btn btn-outline-secondary btn-sm">
+      <i class="bi bi-arrow-left me-1"></i>Back to Report
+    </a>
+    <button onclick="window.print()" class="btn btn-sm"
+            style="background:#14b8a6;color:white;">
+      <i class="bi bi-printer me-1"></i>Print / Save PDF
+    </button>
+  </div>
+</div>
+
+<!-- Show message if no technical questions exist -->
+{% if report.questions | selectattr("type","equalto","Technical") | list | length == 0 %}
+<div class="alert alert-success">
+  <i class="bi bi-trophy-fill me-2"></i>
+  You have <strong>no skill gaps</strong> for the {{ report.profile.role }} role.
+  Role, goal, HR, and revision questions are listed below.
+</div>
+{% endif %}
+
+<!-- Questions rendered as numbered cards with colour-coded type badges -->
+{% for q in report.questions %}
+<div class="card mb-3 shadow-sm border-0">
+  <div class="card-header d-flex justify-content-between align-items-center"
+       style="background:
+         {% if q.type == 'Technical' %}#eef2ff
+         {% elif q.type == 'Coding' %}#fff7ed
+         {% elif q.type == 'Role Concept' %}#f0fdf4
+         {% elif q.type == 'Goal' %}#fdf4ff
+         {% elif q.type == 'Revision' %}#f0fdfa
+         {% else %}#f0fdfa{% endif %};">
+    <strong>Q{{ loop.index }}. {{ q.question }}</strong>
+    <!-- Badge colour changes by question type so the student knows what to expect -->
+    <span class="badge ms-2 text-nowrap
+      {% if q.type == 'Technical' %}bg-primary
+      {% elif q.type == 'Coding' %}bg-warning text-dark
+      {% elif q.type == 'Role Concept' %}bg-success
+      {% elif q.type == 'Goal' %}bg-info text-dark
+      {% elif q.type == 'Revision' %}bg-secondary
+      {% else %}bg-success{% endif %}">
+      {{ q.type }} – {{ q.skill }}
+    </span>
+  </div>
+  <div class="card-body">
+    <p class="mb-0">
+      <i class="bi bi-lightbulb-fill me-2" style="color:#14b8a6;"></i>{{ q.answer }}
+    </p>
+  </div>
+</div>
+{% endfor %}
+
+{% endblock %}

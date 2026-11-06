@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+{% block title %}Results – {{ report.profile.name }}{% endblock %}
+
+{% block content %}
+{% set profile   = report.profile %}
+{% set gap       = report.gap %}
+{% set readiness = report.readiness %}
+{% set recs      = report.recs %}
+{% set roadmap   = report.roadmap %}
+{% set consist   = report.consist %}
+
+<!-- Page header -->
+<div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+  <h2 class="fw-bold mb-0" style="color:#1e3a5f;">
+    <i class="bi bi-person-badge me-2"></i>Career Report — {{ profile.name }}
+  </h2>
+  <div class="d-flex gap-2 no-print">
+    <!-- Button to go to the interview prep page -->
+    <a href="{{ url_for('interview_page', report_id=report_id) }}"
+       class="btn btn-outline-primary btn-sm">
+      <i class="bi bi-chat-quote me-1"></i>Interview Prep
+    </a>
+    <!-- Print/Save as PDF button -->
+    <button onclick="window.print()" class="btn btn-sm"
+            style="background:#14b8a6;color:white;">
+      <i class="bi bi-printer me-1"></i>Print / Save PDF
+    </button>
+  </div>
+</div>
+
+<!-- ── 1. Consistency Badge ───────────────────────────────── -->
+<div class="mb-3">
+  {% if consist.consistent %}
+    <span class="badge fs-6 px-3 py-2" style="background:#14b8a6;">
+      <i class="bi bi-check-circle-fill me-1"></i>Consistent
+    </span>
+  {% else %}
+    <span class="badge bg-danger fs-6 px-3 py-2">
+      <i class="bi bi-exclamation-triangle-fill me-1"></i>Inconsistency Detected
+    </span>
+    <ul class="mt-2 text-danger small">
+      {% for issue in consist.issues %}<li>{{ issue }}</li>{% endfor %}
+    </ul>
+  {% endif %}
+</div>
+
+<!-- ── 2. Profile Summary Card ───────────────────────────── -->
+<div class="card shadow-sm mb-4 border-0">
+  <div class="card-header fw-bold text-white" style="background:#1e3a5f;">
+    <i class="bi bi-person-lines-fill me-2"></i>Professional Summary
+  </div>
+  <div class="card-body">
+    <p class="lead mb-3">{{ report.featured }}</p>
+    <div class="accordion accordion-flush" id="summAcc">
+      {% for s in report.summaries %}
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#sum{{ loop.index }}">
+            Variation {{ loop.index }}
+          </button>
+        </h2>
+        <div id="sum{{ loop.index }}" class="accordion-collapse collapse"
+             data-bs-parent="#summAcc">
+          <div class="accordion-body text-muted">{{ s }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- ── 3. Readiness Score & Progress Bar ─────────────────── -->
+<div class="card shadow-sm mb-4 border-0">
+  <div class="card-header fw-bold text-white" style="background:#1e3a5f;">
+    <i class="bi bi-speedometer2 me-2"></i>Readiness Score
+  </div>
+  <div class="card-body">
+    <div class="d-flex justify-content-between mb-1">
+      <span class="text-muted small">{{ gap.formula }}</span>
+      <strong>{{ readiness.score }}% — {{ readiness.label }}</strong>
+    </div>
+    <div class="progress" style="height:22px;">
+      <div class="progress-bar"
+           style="width:{{ readiness.score }}%;
+                  background:{% if readiness.score >= 75 %}#14b8a6{% elif readiness.score >= 40 %}#f59e0b{% else %}#ef4444{% endif %};">
+        {{ readiness.score }}%
+      </div>
+    </div>
+    <!-- Level legend under the progress bar -->
+    <div class="d-flex justify-content-between mt-2 small text-muted">
+      <span><span class="badge bg-danger me-1">●</span>Beginner (&lt;40%)</span>
+      <span><span class="badge me-1" style="background:#f59e0b;">●</span>Intermediate (40–74%)</span>
+      <span><span class="badge me-1" style="background:#14b8a6;">●</span>Job-Ready (75%+)</span>
+    </div>
+    <!-- Next-level hint sentence -->
+    {% if report.hint %}
+    <div class="alert alert-info mt-3 mb-0 py-2 px-3 small">
+      <i class="bi bi-lightbulb-fill me-1"></i>{{ report.hint }}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- ── 4. Skill Gap ──────────────────────────────────────── -->
+<div class="card shadow-sm mb-4 border-0">
+  <div class="card-header fw-bold text-white" style="background:#1e3a5f;">
+    <i class="bi bi-bar-chart-fill me-2"></i>Skill Gap Analysis
+  </div>
+  <div class="card-body">
+    <div class="row g-3">
+      <div class="col-md-4">
+        <h6 class="fw-semibold text-muted">Required ({{ gap.required_n }})</h6>
+        {% for s in gap.required %}
+          <span class="badge bg-secondary me-1 mb-1">{{ s }}</span>
+        {% endfor %}
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-semibold" style="color:#14b8a6;">
+          <i class="bi bi-check-circle-fill me-1"></i>You Have ({{ gap.matched | length }})
+        </h6>
+        {% for s in gap.matched %}
+          <span class="badge me-1 mb-1" style="background:#14b8a6;">{{ s }}</span>
+        {% endfor %}
+        {% if not gap.matched %}<span class="text-muted small">None matched</span>{% endif %}
+      </div>
+      <div class="col-md-4">
+        <h6 class="fw-semibold text-danger">
+          <i class="bi bi-x-circle-fill me-1"></i>Missing ({{ gap.missing | length }})
+        </h6>
+        {% for s in gap.missing %}
+          <span class="badge bg-danger me-1 mb-1">{{ s }}</span>
+        {% endfor %}
+        {% if not gap.missing %}<span class="text-muted small">No gaps!</span>{% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 5. Learning Recommendations ──────────────────────── -->
+{% if recs %}
+<div class="card shadow-sm mb-4 border-0">
+  <div class="card-header fw-bold text-white" style="background:#1e3a5f;">
+    <i class="bi bi-book-fill me-2"></i>Learning Recommendations
+  </div>
+  <!-- Total learning time summary box -->
+  {% if report.learn_time %}
+  <div class="alert alert-secondary mb-0 py-2 px-3 mx-3 mt-3 small">
+    <i class="bi bi-clock-fill me-1"></i>
+    <strong>Total: {{ report.learn_time.text }} to become job-ready.</strong>
+  </div>
+  {% endif %}
+  <div class="card-body p-0 mt-2">
+    <div class="table-responsive">
+      <table class="table table-hover mb-0">
+        <thead class="table-light">
+          <tr>
+            <th>Skill</th><th>Priority</th><th>Why It Matters</th>
+            <th>Activity</th><th>Project</th><th>Days</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for r in recs %}
+          <tr>
+            <td><span class="badge bg-danger">{{ r.skill }}</span></td>
+            <!-- Priority badge: red for High, orange for Medium, grey for Low -->
+            <td>
+              {% if r.priority == "High" %}
+                <span class="badge bg-danger">High</span>
+              {% elif r.priority == "Medium" %}
+                <span class="badge" style="background:#f59e0b;">Medium</span>
+              {% else %}
+                <span class="badge bg-secondary">Low</span>
+              {% endif %}
+            </td>
+            <td>{{ r.why }}</td>
+            <td>{{ r.activity }}</td>
+            <td>{{ r.project }}</td>
+            <td class="text-center fw-bold">{{ r.days }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- ── 6. 4-Week Roadmap ─────────────────────────────────── -->
+{% if roadmap %}
+<div class="card shadow-sm mb-4 border-0">
+  <div class="card-header fw-bold text-white" style="background:#1e3a5f;">
+    <i class="bi bi-calendar4-week me-2"></i>4-Week Learning Roadmap
+  </div>
+  <div class="card-body">
+    <div class="row g-3">
+      {% for week, skills in roadmap.items() %}
+      <div class="col-md-6 col-lg-3">
+        <div class="p-3 rounded h-100" style="background:#f0fdfa;border:1px solid #14b8a6;">
+          <h6 class="fw-bold" style="color:#1e3a5f;">{{ week }}</h6>
+          {% for s in skills %}
+            <span class="badge me-1 mb-1 bg-secondary">{{ s }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<!-- ── 7. Suggested Roles Based on Interests ─────────────── -->
+{% if report.suggested %}
+<div class="card shadow-sm mb-4 border-0">
+  <div class="card-header fw-bold text-white" style="background:#1e3a5f;">
+    <i class="bi bi-stars me-2"></i>Roles Suggested For Your Interests
+  </div>
+  <div class="card-body">
+    {% for r in report.suggested %}
+      <span class="badge me-2 mb-1 fs-6" style="background:#1e3a5f;">{{ r }}</span>
+    {% endfor %}
+    <!-- Show a note (not an error) if the target role is not in the top suggestions -->
+    {% if profile.role not in report.suggested %}
+    <div class="alert alert-warning mt-3 py-2 small mb-0">
+      <i class="bi bi-info-circle me-1"></i>
+      Your target role <strong>{{ profile.role }}</strong> is not in the top suggestions — that is fine, you can still pursue it!
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+<!-- ── 8. Best Matching Roles ─────────────────────────────── -->
+{% if report.best_roles %}
+<div class="card shadow-sm mb-4 border-0">
+  <div class="card-header fw-bold text-white" style="background:#1e3a5f;">
+    <i class="bi bi-trophy-fill me-2"></i>Best Roles For You (by skill match)
+  </div>
+  <div class="card-body">
+    {% for item in report.best_roles %}
+    <div class="mb-3">
+      <div class="d-flex justify-content-between mb-1">
+        <span class="fw-semibold">{{ item.role }}</span>
+        <span class="text-muted small">{{ item.pct }}%</span>
+      </div>
+      <div class="progress" style="height:16px;">
+        <div class="progress-bar"
+             style="width:{{ item.pct }}%;
+                    background:{% if item.pct >= 75 %}#14b8a6{% elif item.pct >= 40 %}#f59e0b{% else %}#ef4444{% endif %};">
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<!-- ── 9. Extra Skills You Have ───────────────────────────── -->
+{% if report.extra_skills %}
+<div class="card shadow-sm mb-4 border-0">
+  <div class="card-header fw-bold text-white" style="background:#1e3a5f;">
+    <i class="bi bi-plus-circle-fill me-2"></i>Extra Skills You Have
+  </div>
+  <div class="card-body">
+    <p class="text-muted small mb-2">
+      These skills are not required for {{ profile.role }} but are still valuable assets.
+    </p>
+    {% for s in report.extra_skills %}
+      <span class="badge bg-info text-dark me-1 mb-1">{{ s }}</span>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}

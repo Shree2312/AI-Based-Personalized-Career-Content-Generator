@@ -1,0 +1,662 @@
+{
+  "python": {
+    "why": "Python is the top language for backend, data, and automation roles",
+    "learning_activity": "Complete Python basics: variables, loops, functions, OOP",
+    "project": "Build a CLI to-do list app",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What are Python decorators and how do they work?",
+    "short_answer": "Decorators wrap a function to add behaviour before/after it runs using the @ syntax.",
+    "coding_question": "Write a Python decorator that logs the name of any function it wraps."
+  },
+  "flask": {
+    "why": "Lightweight web framework used heavily in Python backend roles",
+    "learning_activity": "Build a simple CRUD web app with Flask routes and templates",
+    "project": "Create a personal blog with Flask and SQLite",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "How does Flask handle routing?",
+    "short_answer": "Flask maps URLs to functions using the @app.route decorator.",
+    "coding_question": "Write a Flask route that accepts a name as a URL parameter and returns a greeting."
+  },
+  "django": {
+    "why": "Full-stack framework required for large Python web projects",
+    "learning_activity": "Follow Django official tutorial, build a polls app",
+    "project": "Build an e-commerce product listing site",
+    "duration_days": 14,
+    "priority": "Medium",
+    "interview_question": "What is Django ORM?",
+    "short_answer": "ORM lets you interact with the database using Python objects instead of raw SQL.",
+    "coding_question": ""
+  },
+  "sql": {
+    "why": "Data storage and retrieval is essential in every backend and data role",
+    "learning_activity": "Practice SELECT, JOIN, GROUP BY queries on a sample database",
+    "project": "Design a student database schema and query it",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is the difference between INNER JOIN and LEFT JOIN?",
+    "short_answer": "INNER JOIN returns only matching rows; LEFT JOIN returns all left rows plus matches.",
+    "coding_question": "Write a SQL query to find the top 3 students with the highest average marks."
+  },
+  "git": {
+    "why": "Version control is mandatory in every professional development team",
+    "learning_activity": "Learn git init, commit, push, pull, branch, merge",
+    "project": "Maintain your project history on GitHub",
+    "duration_days": 5,
+    "priority": "High",
+    "interview_question": "What is the difference between git merge and git rebase?",
+    "short_answer": "Merge keeps branch history; rebase rewrites commits onto another branch linearly.",
+    "coding_question": ""
+  },
+  "rest api": {
+    "why": "APIs connect front-end to back-end and are core to all web services",
+    "learning_activity": "Build and test REST endpoints using Flask and Postman",
+    "project": "Create a weather data API with Flask",
+    "duration_days": 7,
+    "priority": "High",
+    "interview_question": "What are HTTP methods GET, POST, PUT, DELETE used for?",
+    "short_answer": "GET reads, POST creates, PUT updates, DELETE removes a resource.",
+    "coding_question": ""
+  },
+  "linux": {
+    "why": "Most servers run Linux; command-line skills are essential for deployment",
+    "learning_activity": "Practice basic shell commands, file permissions, process management",
+    "project": "Deploy a Flask app on a Linux VM",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What command shows running processes in Linux?",
+    "short_answer": "The `ps aux` or `top` command shows all running processes.",
+    "coding_question": ""
+  },
+  "testing": {
+    "why": "Writing tests ensures code quality and prevents regressions in production",
+    "learning_activity": "Learn pytest: write unit tests and use fixtures",
+    "project": "Write tests for your Flask blog app",
+    "duration_days": 5,
+    "priority": "Low",
+    "interview_question": "What is the difference between unit testing and integration testing?",
+    "short_answer": "Unit tests check individual functions; integration tests check how parts work together.",
+    "coding_question": "Write a pytest unit test for a function that adds two numbers."
+  },
+  "excel": {
+    "why": "Excel is used for quick analysis, pivot tables, and stakeholder reports",
+    "learning_activity": "Learn VLOOKUP, pivot tables, and conditional formatting",
+    "project": "Create a sales dashboard in Excel",
+    "duration_days": 5,
+    "priority": "Medium",
+    "interview_question": "What is a pivot table used for?",
+    "short_answer": "A pivot table summarises and groups large datasets interactively.",
+    "coding_question": ""
+  },
+  "pandas": {
+    "why": "Pandas is the standard Python library for data manipulation and analysis",
+    "learning_activity": "Learn DataFrame operations: filter, group, merge, pivot",
+    "project": "Clean and analyse a real-world dataset from Kaggle",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is the difference between loc and iloc in pandas?",
+    "short_answer": "loc uses label-based indexing; iloc uses integer-position-based indexing.",
+    "coding_question": "Write pandas code to load a CSV, drop null rows, and print the top 5 rows."
+  },
+  "data visualization": {
+    "why": "Charts communicate insights to non-technical stakeholders clearly",
+    "learning_activity": "Learn Matplotlib and Seaborn: bar, line, scatter, heatmap",
+    "project": "Create an EDA dashboard for a sales dataset",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "When would you use a box plot?",
+    "short_answer": "A box plot shows distribution, median, and outliers in a dataset.",
+    "coding_question": ""
+  },
+  "statistics": {
+    "why": "Statistical thinking is core to drawing correct conclusions from data",
+    "learning_activity": "Study mean, median, standard deviation, hypothesis testing",
+    "project": "Run a hypothesis test on a sample dataset",
+    "duration_days": 7,
+    "priority": "High",
+    "interview_question": "What is a p-value?",
+    "short_answer": "A p-value measures the probability that results occurred by chance; <0.05 is significant.",
+    "coding_question": ""
+  },
+  "power bi": {
+    "why": "Power BI is widely used for business dashboards and reporting",
+    "learning_activity": "Build an interactive dashboard from a sample dataset",
+    "project": "Create a sales KPI dashboard in Power BI",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What is DAX in Power BI?",
+    "short_answer": "DAX is Data Analysis Expressions, a formula language used in Power BI calculations.",
+    "coding_question": ""
+  },
+  "html": {
+    "why": "HTML is the foundation of every web page structure",
+    "learning_activity": "Build a multi-page static website with semantic HTML tags",
+    "project": "Create a personal portfolio website",
+    "duration_days": 5,
+    "priority": "High",
+    "interview_question": "What is semantic HTML?",
+    "short_answer": "Semantic HTML uses tags like header, nav, article that describe content meaning.",
+    "coding_question": ""
+  },
+  "css": {
+    "why": "CSS controls the visual styling of every web page",
+    "learning_activity": "Learn Flexbox, Grid, and CSS transitions",
+    "project": "Style your portfolio with a responsive CSS layout",
+    "duration_days": 7,
+    "priority": "High",
+    "interview_question": "What is the CSS box model?",
+    "short_answer": "The box model describes an element's content, padding, border, and margin layers.",
+    "coding_question": ""
+  },
+  "javascript": {
+    "why": "JavaScript adds interactivity and logic to every web page",
+    "learning_activity": "Learn DOM manipulation, events, fetch API, and async/await",
+    "project": "Build an interactive quiz app in vanilla JS",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is the difference between == and === in JavaScript?",
+    "short_answer": "== checks value only; === checks both value and type (strict equality).",
+    "coding_question": "Write a JavaScript function that reverses a string without using .reverse()."
+  },
+  "react": {
+    "why": "React is the most popular front-end library for building dynamic UIs",
+    "learning_activity": "Learn React components, props, state, and hooks",
+    "project": "Build a task manager app with React",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is the virtual DOM in React?",
+    "short_answer": "React keeps a virtual copy of the DOM and only updates changed parts for performance.",
+    "coding_question": ""
+  },
+  "responsive design": {
+    "why": "Sites must look good on all screen sizes, especially mobile devices",
+    "learning_activity": "Learn CSS media queries and Bootstrap grid system",
+    "project": "Make your portfolio fully responsive on mobile",
+    "duration_days": 5,
+    "priority": "Medium",
+    "interview_question": "What is a media query in CSS?",
+    "short_answer": "A media query applies CSS rules only when the screen meets a size condition.",
+    "coding_question": ""
+  },
+  "machine learning": {
+    "why": "Core ML discipline: classification, regression, and clustering models",
+    "learning_activity": "Learn supervised and unsupervised algorithms using scikit-learn",
+    "project": "Build a house price prediction model",
+    "duration_days": 21,
+    "priority": "High",
+    "interview_question": "What is overfitting and how do you prevent it?",
+    "short_answer": "Overfitting is when a model memorises training data; prevent with regularisation or more data.",
+    "coding_question": "Write Python code to train a linear regression model and print the R2 score."
+  },
+  "deep learning": {
+    "why": "Neural networks power modern image, speech, and NLP tasks",
+    "learning_activity": "Build a neural network with TensorFlow/Keras",
+    "project": "Train an image classifier on the MNIST dataset",
+    "duration_days": 21,
+    "priority": "High",
+    "interview_question": "What is backpropagation?",
+    "short_answer": "Backpropagation calculates gradients to update neural network weights during training.",
+    "coding_question": ""
+  },
+  "numpy": {
+    "why": "NumPy handles fast numerical computation underlying all ML libraries",
+    "learning_activity": "Learn arrays, broadcasting, and matrix operations",
+    "project": "Implement linear regression from scratch using NumPy",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What is broadcasting in NumPy?",
+    "short_answer": "Broadcasting lets NumPy perform operations on arrays of different shapes automatically.",
+    "coding_question": "Write NumPy code to create a 3x3 matrix and compute its transpose."
+  },
+  "data structures": {
+    "why": "Choosing the right data structure is key to writing efficient code",
+    "learning_activity": "Study arrays, linked lists, stacks, queues, trees, graphs, hash maps",
+    "project": "Implement a stack and queue from scratch",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is the time complexity of searching in a hash map?",
+    "short_answer": "Average case O(1) — hash maps provide constant-time lookups.",
+    "coding_question": "Implement a stack using a Python list with push, pop, and peek methods."
+  },
+  "algorithms": {
+    "why": "Algorithms determine how efficiently a program solves problems",
+    "learning_activity": "Practice sorting, searching, recursion, and dynamic programming on LeetCode",
+    "project": "Solve 20 LeetCode easy problems covering arrays and strings",
+    "duration_days": 21,
+    "priority": "High",
+    "interview_question": "What is dynamic programming?",
+    "short_answer": "DP breaks problems into overlapping subproblems and stores results to avoid recomputation.",
+    "coding_question": "Write a function to find the nth Fibonacci number using dynamic programming."
+  },
+  "object oriented programming": {
+    "why": "OOP is the fundamental design paradigm of large software systems",
+    "learning_activity": "Learn classes, inheritance, encapsulation, and polymorphism",
+    "project": "Design a library management system using OOP",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What are the four pillars of OOP?",
+    "short_answer": "Encapsulation, Abstraction, Inheritance, and Polymorphism.",
+    "coding_question": "Write a Python class BankAccount with deposit, withdraw, and get_balance methods."
+  },
+  "java": {
+    "why": "Java is the core language for enterprise and Android development",
+    "learning_activity": "Learn Java syntax, OOP, collections, and exception handling",
+    "project": "Build a console-based bank account simulator",
+    "duration_days": 21,
+    "priority": "High",
+    "interview_question": "What is the difference between an interface and an abstract class in Java?",
+    "short_answer": "An interface defines a contract; an abstract class can have partial implementation.",
+    "coding_question": ""
+  },
+  "spring boot": {
+    "why": "Spring Boot is the leading Java framework for building REST APIs and web apps",
+    "learning_activity": "Build a Spring Boot REST API with CRUD operations",
+    "project": "Create a Student Management REST API with Spring Boot",
+    "duration_days": 21,
+    "priority": "High",
+    "interview_question": "What is dependency injection in Spring?",
+    "short_answer": "Spring automatically injects required objects into a class instead of creating them manually.",
+    "coding_question": ""
+  },
+  "maven": {
+    "why": "Maven manages Java project dependencies and build lifecycle",
+    "learning_activity": "Learn Maven POM.xml, dependency management, and build phases",
+    "project": "Set up a Maven multi-module Java project",
+    "duration_days": 5,
+    "priority": "Medium",
+    "interview_question": "What is pom.xml in Maven?",
+    "short_answer": "pom.xml is the project object model file that defines dependencies and build configuration.",
+    "coding_question": ""
+  },
+  "typescript": {
+    "why": "TypeScript adds static typing to JavaScript, reducing bugs in large codebases",
+    "learning_activity": "Learn TypeScript types, interfaces, generics, and compile-time checking",
+    "project": "Rewrite a JavaScript project in TypeScript with strict type checks",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is the difference between TypeScript and JavaScript?",
+    "short_answer": "TypeScript is a superset of JavaScript that adds static types checked at compile time.",
+    "coding_question": "Write a TypeScript function that takes a string array and returns only strings longer than 3 characters."
+  },
+  "node.js": {
+    "why": "Node.js enables JavaScript on the server side, used for fast backend APIs",
+    "learning_activity": "Build a REST API with Node.js, Express, and a MongoDB database",
+    "project": "Create a task management REST API with Express and MongoDB",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is the event loop in Node.js?",
+    "short_answer": "The event loop lets Node.js handle multiple requests without creating a new thread for each one.",
+    "coding_question": ""
+  },
+  "mongodb": {
+    "why": "MongoDB is the most popular NoSQL database for flexible, document-based storage",
+    "learning_activity": "Learn CRUD operations, indexes, aggregation pipeline, and schema design",
+    "project": "Build a blog backend with Node.js and MongoDB",
+    "duration_days": 7,
+    "priority": "High",
+    "interview_question": "What is the difference between SQL and NoSQL databases?",
+    "short_answer": "SQL stores data in fixed tables with relationships; NoSQL stores flexible documents or key-value pairs.",
+    "coding_question": ""
+  },
+  "docker": {
+    "why": "Docker packages applications in containers that run identically on any system",
+    "learning_activity": "Learn Dockerfile, docker build, docker run, and Docker Compose",
+    "project": "Containerise a Flask application with Docker and docker-compose",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is the difference between a Docker image and a Docker container?",
+    "short_answer": "An image is a template; a container is a running instance of that image.",
+    "coding_question": ""
+  },
+  "kubernetes": {
+    "why": "Kubernetes orchestrates containers at scale, used in every major cloud deployment",
+    "learning_activity": "Learn pods, deployments, services, and kubectl commands",
+    "project": "Deploy a multi-container app on a local Kubernetes cluster using Minikube",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is a Kubernetes pod?",
+    "short_answer": "A pod is the smallest deployable unit in Kubernetes, containing one or more containers.",
+    "coding_question": ""
+  },
+  "aws": {
+    "why": "AWS is the leading cloud platform; most companies deploy their infrastructure on it",
+    "learning_activity": "Learn EC2, S3, Lambda, IAM, and RDS through the AWS free tier",
+    "project": "Host a static website on S3 and deploy a Lambda function",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is the difference between EC2 and Lambda in AWS?",
+    "short_answer": "EC2 is a virtual machine you manage; Lambda is serverless — it runs your code without managing servers.",
+    "coding_question": ""
+  },
+  "ci/cd": {
+    "why": "CI/CD automates building, testing, and deploying code, reducing manual errors",
+    "learning_activity": "Set up a GitHub Actions pipeline that builds and tests on every push",
+    "project": "Create a CI/CD pipeline for a Flask app using GitHub Actions",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is the difference between Continuous Integration and Continuous Deployment?",
+    "short_answer": "CI automatically tests every code change; CD automatically deploys the tested code to production.",
+    "coding_question": ""
+  },
+  "networking": {
+    "why": "Understanding networking is essential for cybersecurity and DevOps roles",
+    "learning_activity": "Study OSI model, TCP/IP, DNS, HTTP, firewalls, and subnetting",
+    "project": "Set up a home lab network with VLANs and document the topology",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is the difference between TCP and UDP?",
+    "short_answer": "TCP is reliable and connection-oriented; UDP is faster but does not guarantee delivery.",
+    "coding_question": ""
+  },
+  "angular": {
+    "why": "Angular is a full-featured TypeScript framework used for large enterprise frontends",
+    "learning_activity": "Learn Angular components, modules, services, routing, and HTTP client",
+    "project": "Build a student grade dashboard using Angular and a mock REST API",
+    "duration_days": 14,
+    "priority": "Medium",
+    "interview_question": "What is two-way data binding in Angular?",
+    "short_answer": "Two-way binding keeps the model and view in sync automatically using [(ngModel)].",
+    "coding_question": ""
+  },
+  "vue.js": {
+    "why": "Vue.js is a progressive JavaScript framework easy to integrate into existing projects",
+    "learning_activity": "Learn Vue components, directives, Vuex state management, and Vue Router",
+    "project": "Build a shopping cart UI with Vue.js and local state management",
+    "duration_days": 10,
+    "priority": "Medium",
+    "interview_question": "What is the Vue.js reactivity system?",
+    "short_answer": "Vue automatically tracks data dependencies and re-renders only the affected parts of the UI.",
+    "coding_question": ""
+  },
+  "postgresql": {
+    "why": "PostgreSQL is the most feature-rich open-source relational database used in production",
+    "learning_activity": "Learn advanced queries, stored procedures, indexes, and JSON support",
+    "project": "Design and populate a PostgreSQL database for an e-commerce system",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is a database index and when should you use one?",
+    "short_answer": "An index speeds up queries on a column; use it on frequently searched or joined columns.",
+    "coding_question": "Write a SQL query to find all orders placed in the last 30 days with a total above 500."
+  },
+  "redis": {
+    "why": "Redis is an in-memory data store used for caching, sessions, and real-time features",
+    "learning_activity": "Learn Redis data types: strings, hashes, lists, sets, and sorted sets",
+    "project": "Add Redis caching to a Flask API to reduce database query time",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What is Redis and what is it commonly used for?",
+    "short_answer": "Redis is an in-memory key-value store used for caching, session storage, and pub/sub messaging.",
+    "coding_question": ""
+  },
+  "mysql": {
+    "why": "MySQL is one of the most widely deployed relational databases in the world",
+    "learning_activity": "Practice CRUD operations, transactions, and stored procedures in MySQL",
+    "project": "Build a student attendance system using MySQL as the backend",
+    "duration_days": 7,
+    "priority": "High",
+    "interview_question": "What is the difference between MyISAM and InnoDB storage engines in MySQL?",
+    "short_answer": "InnoDB supports transactions and foreign keys; MyISAM is faster for read-heavy tasks but no transactions.",
+    "coding_question": ""
+  },
+  "linux administration": {
+    "why": "Servers, cloud VMs, and containers all run Linux; admin skills are non-negotiable",
+    "learning_activity": "Learn user management, cron jobs, systemd services, and log analysis",
+    "project": "Configure a Linux server with user accounts, firewall rules, and a cron backup job",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "How do you check disk usage and free memory on a Linux server?",
+    "short_answer": "Use `df -h` for disk usage and `free -h` or `top` for memory information.",
+    "coding_question": ""
+  },
+  "bash scripting": {
+    "why": "Bash scripts automate repetitive server tasks and are core to DevOps workflows",
+    "learning_activity": "Learn bash variables, loops, conditionals, functions, and cron scheduling",
+    "project": "Write a bash script that backs up a directory and emails a report",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What does the shebang line #!/bin/bash do?",
+    "short_answer": "It tells the OS to run this script using the bash interpreter found at /bin/bash.",
+    "coding_question": "Write a bash script that counts the number of lines in all .log files in a directory."
+  },
+  "penetration testing": {
+    "why": "Pen testing finds vulnerabilities before attackers do, a core skill in cybersecurity",
+    "learning_activity": "Learn Kali Linux tools: nmap, Burp Suite, Metasploit, and Wireshark",
+    "project": "Set up a home lab with a vulnerable VM and document a full pen test report",
+    "duration_days": 21,
+    "priority": "High",
+    "interview_question": "What is the difference between black-box and white-box penetration testing?",
+    "short_answer": "Black-box testers have no internal knowledge; white-box testers have full access to source code.",
+    "coding_question": ""
+  },
+  "cryptography": {
+    "why": "Cryptography protects data in transit and at rest; every secure system depends on it",
+    "learning_activity": "Study symmetric/asymmetric encryption, hashing, TLS, and digital signatures",
+    "project": "Implement AES encryption and RSA key exchange in Python",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is the difference between symmetric and asymmetric encryption?",
+    "short_answer": "Symmetric uses one shared key; asymmetric uses a public key to encrypt and a private key to decrypt.",
+    "coding_question": ""
+  },
+  "network security": {
+    "why": "Securing network infrastructure is a primary responsibility in cybersecurity roles",
+    "learning_activity": "Learn firewall configuration, IDS/IPS, VPN setup, and packet analysis",
+    "project": "Configure firewall rules on a Linux server and analyse traffic with Wireshark",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is a firewall and what types are there?",
+    "short_answer": "A firewall filters network traffic; types include packet-filtering, stateful, and application-layer firewalls.",
+    "coding_question": ""
+  },
+  "vulnerability assessment": {
+    "why": "Identifying vulnerabilities is the first step in protecting any system or application",
+    "learning_activity": "Learn CVE databases, CVSS scoring, and tools like Nessus and OpenVAS",
+    "project": "Perform a vulnerability scan on a test network and write a formal report",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is a CVE?",
+    "short_answer": "CVE stands for Common Vulnerabilities and Exposures — a public list of known security flaws.",
+    "coding_question": ""
+  },
+  "android sdk": {
+    "why": "The Android SDK provides all tools and APIs needed to build Android apps",
+    "learning_activity": "Learn Activity lifecycle, Intents, RecyclerView, and permissions",
+    "project": "Build a note-taking app with a RecyclerView list and room database",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is the Activity lifecycle in Android?",
+    "short_answer": "The lifecycle is onCreate, onStart, onResume, onPause, onStop, onDestroy — managing app state at each stage.",
+    "coding_question": ""
+  },
+  "kotlin": {
+    "why": "Kotlin is the preferred modern language for Android development recommended by Google",
+    "learning_activity": "Learn Kotlin syntax, null safety, data classes, coroutines, and extensions",
+    "project": "Rebuild a Java Android app in Kotlin using data classes and coroutines",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is null safety in Kotlin?",
+    "short_answer": "Kotlin makes null values explicit with ? types, preventing NullPointerExceptions at compile time.",
+    "coding_question": "Write a Kotlin function that takes a nullable string and returns its length or 0 if null."
+  },
+  "xml layouts": {
+    "why": "Android UI is defined in XML layouts; understanding them is required for all Android apps",
+    "learning_activity": "Learn ConstraintLayout, LinearLayout, RelativeLayout, and View binding",
+    "project": "Design a login screen with a profile image, two text fields, and a submit button",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What is ConstraintLayout in Android?",
+    "short_answer": "ConstraintLayout positions views relative to each other or the parent using constraints, like a flexible grid.",
+    "coding_question": ""
+  },
+  "sqlite": {
+    "why": "SQLite is the built-in local database on Android used for offline data storage",
+    "learning_activity": "Learn Room Database ORM: entities, DAOs, and queries in Android",
+    "project": "Add offline storage to your note app using Room and SQLite",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What is Room Database in Android?",
+    "short_answer": "Room is an ORM layer over SQLite that lets you query a local database using annotated Java/Kotlin objects.",
+    "coding_question": ""
+  },
+  "firebase": {
+    "why": "Firebase provides real-time database, authentication, and cloud storage for mobile apps",
+    "learning_activity": "Learn Firebase Auth, Firestore, and Firebase Cloud Messaging",
+    "project": "Add Google login and real-time chat to your Android app using Firebase",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What is the difference between Firebase Realtime Database and Firestore?",
+    "short_answer": "Realtime Database stores JSON and syncs instantly; Firestore is a more scalable document database.",
+    "coding_question": ""
+  },
+  "database design": {
+    "why": "Good schema design determines how well a database handles growth and queries",
+    "learning_activity": "Learn ER diagrams, normalisation (1NF to 3NF), and schema design patterns",
+    "project": "Design a normalised relational schema for a hospital management system",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is database normalisation?",
+    "short_answer": "Normalisation organises tables to remove redundancy and ensure data integrity through normal forms.",
+    "coding_question": ""
+  },
+  "query optimization": {
+    "why": "Slow queries are the most common performance bottleneck in production databases",
+    "learning_activity": "Learn EXPLAIN plans, indexes, query rewriting, and execution analysis",
+    "project": "Identify and fix 5 slow queries in a sample database using EXPLAIN",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is an execution plan and how do you use it?",
+    "short_answer": "An execution plan shows how the database executes a query; use EXPLAIN to find slow steps and add indexes.",
+    "coding_question": ""
+  },
+  "backup recovery": {
+    "why": "Data loss without backups can destroy a company; DBAs are responsible for backup strategy",
+    "learning_activity": "Learn full, incremental, and differential backups; practice restore procedures",
+    "project": "Automate daily database backups with a bash script and test a full restore",
+    "duration_days": 7,
+    "priority": "High",
+    "interview_question": "What is the difference between a full backup and an incremental backup?",
+    "short_answer": "Full backup copies all data; incremental backup copies only data changed since the last backup.",
+    "coding_question": ""
+  },
+  "replication": {
+    "why": "Database replication provides high availability and read scalability in production systems",
+    "learning_activity": "Learn master-slave replication, read replicas, and failover configuration",
+    "project": "Set up MySQL master-slave replication between two local database instances",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What is database replication and why is it used?",
+    "short_answer": "Replication copies data from one database to another for redundancy and faster read performance.",
+    "coding_question": ""
+  },
+  "cloud computing": {
+    "why": "Cloud is the standard deployment platform; every modern app runs in the cloud",
+    "learning_activity": "Learn cloud concepts: IaaS, PaaS, SaaS, and study AWS or GCP free tier",
+    "project": "Deploy a web application on AWS EC2 and connect it to an RDS database",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is the difference between IaaS, PaaS, and SaaS?",
+    "short_answer": "IaaS gives raw infrastructure, PaaS provides a managed platform, SaaS delivers ready-to-use software.",
+    "coding_question": ""
+  },
+  "terraform": {
+    "why": "Terraform lets you define and provision infrastructure as code, ensuring repeatability",
+    "learning_activity": "Learn HCL syntax, providers, resources, state files, and terraform plan/apply",
+    "project": "Write Terraform code to provision an EC2 instance and S3 bucket on AWS",
+    "duration_days": 10,
+    "priority": "Medium",
+    "interview_question": "What is Infrastructure as Code (IaC)?",
+    "short_answer": "IaC means defining infrastructure (servers, networks) in config files so it can be versioned and automated.",
+    "coding_question": ""
+  },
+  "ansible": {
+    "why": "Ansible automates server configuration and application deployment using simple YAML playbooks",
+    "learning_activity": "Learn inventory files, playbooks, roles, and idempotent task writing",
+    "project": "Write an Ansible playbook to install and configure Nginx on three servers",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What does idempotent mean in the context of Ansible?",
+    "short_answer": "Idempotent means running the same playbook multiple times produces the same result without side effects.",
+    "coding_question": ""
+  },
+  "jenkins": {
+    "why": "Jenkins is the most widely used open-source CI/CD automation server",
+    "learning_activity": "Learn Jenkins pipelines, Jenkinsfile syntax, and integration with git",
+    "project": "Set up a Jenkins pipeline that builds and tests a Python app on every commit",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What is a Jenkinsfile?",
+    "short_answer": "A Jenkinsfile defines the CI/CD pipeline as code stored in the project repository.",
+    "coding_question": ""
+  },
+  "prometheus": {
+    "why": "Prometheus collects metrics from infrastructure and applications for alerting and dashboards",
+    "learning_activity": "Learn PromQL queries, metrics types (counter, gauge, histogram), and alert rules",
+    "project": "Set up Prometheus and Grafana to monitor a Flask application's response time",
+    "duration_days": 7,
+    "priority": "Low",
+    "interview_question": "What is the difference between Prometheus and a traditional monitoring tool?",
+    "short_answer": "Prometheus scrapes metrics from targets using pull model; traditional tools use push or agent-based collection.",
+    "coding_question": ""
+  },
+  "monitoring": {
+    "why": "System monitoring detects issues before they become outages in production",
+    "learning_activity": "Learn metrics, logs, and traces; set up Grafana dashboards and alert rules",
+    "project": "Monitor a web server using Prometheus and create a Grafana dashboard",
+    "duration_days": 7,
+    "priority": "Medium",
+    "interview_question": "What are the three pillars of observability?",
+    "short_answer": "The three pillars are Metrics (numbers over time), Logs (event records), and Traces (request paths).",
+    "coding_question": ""
+  },
+  "r programming": {
+    "why": "R is widely used in academia and data science for statistical analysis and visualisation",
+    "learning_activity": "Learn R data frames, ggplot2 for visualisation, and tidyverse for data wrangling",
+    "project": "Perform exploratory data analysis on a public health dataset using R and ggplot2",
+    "duration_days": 10,
+    "priority": "Medium",
+    "interview_question": "What is the difference between R and Python for data science?",
+    "short_answer": "R excels at statistics and visualisation; Python is more versatile for ML, scripting, and production deployment.",
+    "coding_question": ""
+  },
+  "feature engineering": {
+    "why": "Good features make the biggest difference in model accuracy; feature engineering is critical",
+    "learning_activity": "Learn encoding, scaling, binning, polynomial features, and feature selection",
+    "project": "Engineer features for the Titanic dataset and improve a baseline model's accuracy",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is feature engineering and why does it matter?",
+    "short_answer": "Feature engineering transforms raw data into informative inputs that help models learn patterns better.",
+    "coding_question": ""
+  },
+  "nlp": {
+    "why": "NLP enables machines to understand human language — used in chatbots, search, and translation",
+    "learning_activity": "Learn tokenisation, TF-IDF, word embeddings, and sentiment analysis",
+    "project": "Build a sentiment analysis model for product reviews using scikit-learn",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is tokenisation in NLP?",
+    "short_answer": "Tokenisation splits text into smaller units (words or subwords) so a model can process them numerically.",
+    "coding_question": ""
+  },
+  "computer vision": {
+    "why": "Computer vision powers face recognition, medical imaging, and autonomous systems",
+    "learning_activity": "Learn image processing with OpenCV and CNNs with Keras for image classification",
+    "project": "Train a CNN to classify handwritten digits from the MNIST dataset",
+    "duration_days": 14,
+    "priority": "High",
+    "interview_question": "What is a Convolutional Neural Network (CNN)?",
+    "short_answer": "A CNN uses convolutional layers to detect local features in images, making it ideal for visual tasks.",
+    "coding_question": ""
+  },
+  "model deployment": {
+    "why": "A model that cannot be deployed to production has no real-world value",
+    "learning_activity": "Learn Flask/FastAPI model serving, Docker packaging, and cloud deployment",
+    "project": "Deploy a trained scikit-learn model as a REST API using Flask and Docker",
+    "duration_days": 10,
+    "priority": "High",
+    "interview_question": "What is model drift and how do you detect it?",
+    "short_answer": "Model drift is when a model's accuracy drops because real-world data changed; detect with performance monitoring.",
+    "coding_question": ""
+  }
+}

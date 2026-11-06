@@ -1,0 +1,100 @@
+{
+  "Python Developer": [
+    {"question": "What is the difference between a list and a tuple in Python?", "answer": "Lists are mutable (can be changed); tuples are immutable (cannot be changed after creation)."},
+    {"question": "Explain how Python handles memory management.", "answer": "Python uses automatic garbage collection and reference counting to free unused memory."},
+    {"question": "What is a virtual environment and why do you use one?", "answer": "A virtualenv isolates project dependencies so different projects can use different library versions."},
+    {"question": "What is PEP 8?", "answer": "PEP 8 is Python's official style guide covering naming conventions, indentation, and line length."},
+    {"question": "What is the difference between deep copy and shallow copy?", "answer": "Shallow copy copies references to objects; deep copy creates entirely new independent copies of all nested objects."}
+  ],
+  "Data Analyst": [
+    {"question": "What steps do you take when you receive a messy dataset?", "answer": "Check for nulls, duplicates, wrong data types, and outliers before any analysis."},
+    {"question": "What is the difference between correlation and causation?", "answer": "Correlation means two things move together; causation means one directly causes the other."},
+    {"question": "What is an outlier and how do you handle it?", "answer": "An outlier is a value far from the rest; handle by investigating the cause, then removing or capping it."},
+    {"question": "What is the difference between mean and median and when do you use each?", "answer": "Mean is the average; median is the middle value. Use median when data has outliers."},
+    {"question": "What makes a good data visualisation?", "answer": "A good visualisation is clear, honest, uses the right chart type for the data, and needs no explanation."}
+  ],
+  "Web Developer": [
+    {"question": "What happens when you type a URL into the browser and press Enter?", "answer": "DNS resolves the domain, TCP connects to the server, HTTP request is sent, server responds with HTML, browser renders it."},
+    {"question": "What is the difference between GET and POST HTTP methods?", "answer": "GET retrieves data and parameters go in the URL; POST submits data in the request body."},
+    {"question": "What is CORS and why does it occur?", "answer": "CORS is a browser security rule that blocks requests to a different domain; fixed by adding correct response headers on the server."},
+    {"question": "What is the DOM?", "answer": "The DOM is the browser's tree-like representation of an HTML page that JavaScript can read and modify."},
+    {"question": "What is the difference between localStorage and sessionStorage?", "answer": "localStorage persists until manually cleared; sessionStorage is cleared when the browser tab is closed."}
+  ],
+  "ML Engineer": [
+    {"question": "What is the train-test split and why is it necessary?", "answer": "We split data into train and test sets so we can evaluate how well the model generalises to unseen data."},
+    {"question": "What is cross-validation?", "answer": "Cross-validation splits data into k folds, trains on k-1 and tests on 1 repeatedly, giving a reliable accuracy estimate."},
+    {"question": "What is the difference between classification and regression?", "answer": "Classification predicts a category (spam/not spam); regression predicts a continuous number (house price)."},
+    {"question": "What is a confusion matrix?", "answer": "A confusion matrix shows TP, TN, FP, FN counts, helping you understand where a classifier makes mistakes."},
+    {"question": "What is regularisation and what problem does it solve?", "answer": "Regularisation penalises large model weights (L1/L2) to prevent overfitting on training data."}
+  ],
+  "Software Engineer": [
+    {"question": "What is the difference between a process and a thread?", "answer": "A process is an independent program with its own memory; a thread is a lighter unit of execution within a process."},
+    {"question": "What is Big O notation?", "answer": "Big O describes how the time or space a function needs grows as the input size increases."},
+    {"question": "What is the SOLID principle?", "answer": "SOLID is five design principles for clean OOP: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion."},
+    {"question": "What is the difference between stack and heap memory?", "answer": "Stack stores function call frames and local variables automatically; heap stores dynamically allocated objects."},
+    {"question": "What is a design pattern?", "answer": "A design pattern is a proven, reusable solution to a common software design problem, like Singleton, Factory, or Observer."}
+  ],
+  "Java Developer": [
+    {"question": "What is JVM and how does Java achieve platform independence?", "answer": "JVM is the Java Virtual Machine; Java compiles to bytecode that JVM interprets on any platform."},
+    {"question": "What is garbage collection in Java?", "answer": "JVM automatically frees memory occupied by objects that are no longer referenced, preventing memory leaks."},
+    {"question": "What is the difference between ArrayList and LinkedList?", "answer": "ArrayList has O(1) random access; LinkedList has O(1) insert/delete at ends but O(n) random access."},
+    {"question": "What is an exception and what is the difference between checked and unchecked?", "answer": "Checked exceptions must be handled or declared (IOException); unchecked ones (NullPointerException) are runtime errors."},
+    {"question": "What is multithreading in Java?", "answer": "Multithreading allows multiple threads to run concurrently, improving performance for I/O-bound tasks."}
+  ],
+  "Frontend Developer": [
+    {"question": "What is the difference between display: none and visibility: hidden in CSS?", "answer": "display:none removes the element from layout; visibility:hidden hides it but keeps its space."},
+    {"question": "What is event delegation in JavaScript?", "answer": "Event delegation attaches one listener to a parent element to handle events for all current and future children."},
+    {"question": "What is a CSS preprocessor like Sass?", "answer": "Sass adds variables, nesting, and mixins to CSS, which are compiled down to regular CSS before use."},
+    {"question": "What is the difference between React state and props?", "answer": "Props are read-only inputs passed from parent to child; state is internal data managed by the component itself."},
+    {"question": "What is lazy loading and why is it useful?", "answer": "Lazy loading defers loading non-critical resources until needed, improving initial page load speed."}
+  ],
+  "Backend Developer": [
+    {"question": "What is the difference between authentication and authorisation?", "answer": "Authentication verifies who you are; authorisation checks what you are allowed to do."},
+    {"question": "What is a JWT token?", "answer": "JWT is a signed JSON token used to securely transmit user identity between client and server without sessions."},
+    {"question": "What is database connection pooling?", "answer": "Connection pooling reuses a set of open database connections instead of creating a new one for every request."},
+    {"question": "What is the difference between horizontal and vertical scaling?", "answer": "Vertical scaling adds more power to one server; horizontal scaling adds more servers to share the load."},
+    {"question": "What is an ORM and what are its trade-offs?", "answer": "ORM maps code objects to database tables; it simplifies development but can produce less efficient queries than raw SQL."}
+  ],
+  "Full Stack Developer": [
+    {"question": "How does a full stack developer communicate between frontend and backend?", "answer": "The frontend calls the backend REST API using fetch or Axios; the backend returns JSON data."},
+    {"question": "What is server-side rendering vs client-side rendering?", "answer": "SSR generates HTML on the server for faster initial load; CSR renders in the browser using JavaScript."},
+    {"question": "What is a microservices architecture?", "answer": "Microservices splits an app into small independent services each responsible for one feature, deployed separately."},
+    {"question": "How do you secure a web application?", "answer": "Use HTTPS, validate all inputs, use parameterised queries to prevent SQL injection, and implement proper authentication."},
+    {"question": "What is the role of environment variables in a web app?", "answer": "Environment variables store secrets like API keys and database passwords outside the codebase for security."}
+  ],
+  "Data Scientist": [
+    {"question": "What is the difference between supervised and unsupervised learning?", "answer": "Supervised learning uses labelled data to predict outcomes; unsupervised learning finds hidden patterns in unlabelled data."},
+    {"question": "What is EDA (Exploratory Data Analysis)?", "answer": "EDA is the process of visually and statistically exploring a dataset to understand distributions, patterns, and anomalies before modelling."},
+    {"question": "What is the curse of dimensionality?", "answer": "As the number of features grows, data becomes sparse and models require exponentially more data to generalise well."},
+    {"question": "What is PCA (Principal Component Analysis)?", "answer": "PCA reduces the number of features by transforming them into a smaller set of uncorrelated principal components."},
+    {"question": "What is an ensemble method in machine learning?", "answer": "Ensemble methods combine multiple models (like Random Forest or Gradient Boosting) to produce better predictions than any single model."}
+  ],
+  "DevOps Engineer": [
+    {"question": "What is the difference between DevOps and Agile?", "answer": "Agile is a development methodology for iterative delivery; DevOps extends it to include automated deployment and operations."},
+    {"question": "What is infrastructure as code?", "answer": "IaC means defining servers and networks in config files (like Terraform) so infrastructure can be versioned and reproduced automatically."},
+    {"question": "What is a Kubernetes namespace?", "answer": "A namespace is a virtual cluster inside Kubernetes used to separate resources for different teams or environments."},
+    {"question": "What is blue-green deployment?", "answer": "Blue-green deployment runs two identical environments; traffic switches from blue (old) to green (new) for zero-downtime releases."},
+    {"question": "What is the purpose of a load balancer?", "answer": "A load balancer distributes incoming traffic across multiple servers to prevent overload and ensure high availability."}
+  ],
+  "Cybersecurity Analyst": [
+    {"question": "What is the CIA triad?", "answer": "CIA stands for Confidentiality, Integrity, and Availability — the three core principles of information security."},
+    {"question": "What is social engineering?", "answer": "Social engineering manipulates people into revealing sensitive information or performing actions that compromise security."},
+    {"question": "What is the difference between a virus and a worm?", "answer": "A virus needs a host file and user action to spread; a worm spreads automatically through networks without user interaction."},
+    {"question": "What is two-factor authentication (2FA)?", "answer": "2FA requires a second proof of identity (like an OTP) in addition to a password, making accounts much harder to hijack."},
+    {"question": "What is an SQL injection attack?", "answer": "SQL injection inserts malicious SQL into an input field to manipulate the database; prevent it with parameterised queries."}
+  ],
+  "Android App Developer": [
+    {"question": "What is the difference between an Activity and a Fragment?", "answer": "An Activity is a full screen; a Fragment is a reusable UI section that lives inside an Activity."},
+    {"question": "What is an Intent in Android?", "answer": "An Intent is a message object used to start an Activity, pass data between screens, or trigger a system action."},
+    {"question": "What is the difference between implicit and explicit intents?", "answer": "Explicit intents specify the target component; implicit intents declare an action and let the system find the right app."},
+    {"question": "What is RecyclerView and why is it better than ListView?", "answer": "RecyclerView recycles view objects efficiently, supports multiple layout managers, and handles animations better than ListView."},
+    {"question": "What is the MVVM architecture pattern in Android?", "answer": "MVVM separates UI (View), business logic (ViewModel), and data (Model) so each layer can be tested independently."}
+  ],
+  "Database Administrator": [
+    {"question": "What is a transaction and what are ACID properties?", "answer": "A transaction is a unit of work; ACID stands for Atomicity, Consistency, Isolation, Durability — ensuring reliable database operations."},
+    {"question": "What is deadlock in a database?", "answer": "Deadlock is when two transactions each hold a resource the other needs, so both wait forever; resolved by timeout or rollback."},
+    {"question": "What is the difference between a clustered and non-clustered index?", "answer": "A clustered index determines the physical row order; a non-clustered index is a separate structure pointing to rows."},
+    {"question": "What is database sharding?", "answer": "Sharding splits a large database across multiple servers horizontally so each server handles only a portion of the data."},
+    {"question": "What is a stored procedure?", "answer": "A stored procedure is a named, pre-compiled SQL script stored in the database and called by name, improving reuse and performance."}
+  ]
+}

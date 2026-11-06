@@ -1,0 +1,22 @@
+{
+  "web development":    ["Web Developer", "Frontend Developer", "Full Stack Developer"],
+  "data science":       ["Data Scientist", "Data Analyst", "ML Engineer"],
+  "artificial intelligence": ["ML Engineer", "Data Scientist", "Python Developer"],
+  "cloud computing":    ["DevOps Engineer", "Backend Developer", "Full Stack Developer"],
+  "cybersecurity":      ["Cybersecurity Analyst", "Backend Developer", "Software Engineer"],
+  "mobile apps":        ["Android App Developer", "Frontend Developer", "Full Stack Developer"],
+  "databases":          ["Database Administrator", "Data Analyst", "Backend Developer"],
+  "automation":         ["DevOps Engineer", "Software Engineer", "Python Developer"],
+  "problem solving":    ["Software Engineer", "ML Engineer", "Data Scientist"],
+  "networking":         ["Cybersecurity Analyst", "DevOps Engineer", "Database Administrator"],
+  "game development":   ["Frontend Developer", "Software Engineer", "Full Stack Developer"],
+  "IoT":                ["Python Developer", "Android App Developer", "Software Engineer"],
+  "UI design":          ["Frontend Developer", "Web Developer", "Full Stack Developer"],
+  "statistics":         ["Data Scientist", "Data Analyst", "ML Engineer"],
+  "open source":        ["Python Developer", "Software Engineer", "Full Stack Developer"],
+  "algorithms":         ["Software Engineer", "ML Engineer", "Data Scientist"],
+  "backend systems":    ["Backend Developer", "Python Developer", "Software Engineer"],
+  "enterprise software":["Java Developer", "Software Engineer", "Backend Developer"],
+  "data engineering":   ["Data Scientist", "Data Analyst", "Database Administrator"],
+  "devops culture":     ["DevOps Engineer", "Full Stack Developer", "Backend Developer"]
+}
